@@ -14,7 +14,9 @@ This is a Dockerized/containerized skeleton service for applying Bayesian statis
 
 ### **Usage:**
 
-It all starts with the [experiments.yaml](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/experiments.yaml) file. This is where metadata is listed for each experiment. This metadata could be expanded to include a summary, logic on whether the experiment has finished running, or anything else that you might want to insert in the final writeup. This service is a skeleton, so really up to you.
+Start the service with `docker-compose up` from the terminal.
+
+It all depends on the [experiments.yaml](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/experiments.yaml) file. This is where metadata is listed for each experiment. This metadata could be expanded to include a summary, logic on whether the experiment has finished running, or anything else that you might want to insert in the final writeup. This service is a skeleton, so really up to you.
 
 Quarto is used to generate all HTML files related to experiments, which might get a little heavy depending on how many experiments you run. A more lightweight version could use a similar method to the generation of [index.html](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/website/templates/index_template.html) where you have a template file to which you insert charts and variable values. Quarto renders every experiment through the analysis_output Jupyter notebook (although this could be switched to a markdown file with embedded code).
 
