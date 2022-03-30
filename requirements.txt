@@ -1,0 +1,6 @@
+pandas==1.1.5
+jinja2==3.1.1
+sqlalchemy==1.4.32
+pyyaml==6.0
+jupyter==1.0.0
+BayesABTest==1.0.8

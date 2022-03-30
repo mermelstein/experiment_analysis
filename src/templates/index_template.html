@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Experiment Analysis</title>
+
+<meta name="description" content="Easy Bayesian Testing"/>
+<link rel="canonical" href="https://www.yourwebsite.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Experiment Analysis" />
+<meta property="og:description" content="Easy Bayesian Testing" />
+<meta property="og:url" content="https://www.yourwebsite.com/" />
+<meta property="og:site_name" content="Experiment Analysis" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Easy Bayesian Testing" />
+<meta name="twitter:title" content="Experiment Analysis" />
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/style.css" type='text/css' />
+<link rel="shortcut icon" type="image/jpg" href="/images/icon.png"/>
+</head>
+
+<body>
+
+<div id="container" class="container">
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;, font-size: 10 rem;">
+            <a class="navbar-brand py-3" href="/">Experiment Analysis</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+
+<div id="content" class="container">
+	<br>
+<p>This is a service framework for automating experiment analysis with Bayesian methods. You should fork the repo and adjust to your needs. Contributions to the open source project are always welcome!</p>
+<p style="text-align: center;">
+
+    {% if experiment_list is none %}
+        <div style="text-align: center;">
+        <h3>There are no experiments to be analyzed, stay tuned!</h3>
+        <img src="/images/sad_image.png" alt="Image of Sadness">
+        </div>
+    {% else %}
+        <div class="col-lg-12 col-sm table-responsive-sm">
+            <table class="table table-sm table-striped table-hover">
+                <thead style="background-color: #e3f2fd;">
+                <tr>
+                    <th>Experiment Title</th>
+                    <th>Date</th>
+                    <th>Author</th>
+                    <th>Link</th>
+                </tr>
+                </thead>
+                {% for item in experiment_list %}
+                <tr>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.date }}</td>
+                    <td>{{ item.author }}</td>
+                    <td><a href="{{ item.link }}" target="">analysis link</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+
+</p>
+
+</div><!-- .page-content -->
+</div><!-- .page-wrapper -->
+</body>
+</html>
