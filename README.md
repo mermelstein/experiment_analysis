@@ -4,13 +4,17 @@
 
 This is a Dockerized/containerized skeleton service for applying Bayesian statistics to A/B tests and outputting standardized reports. It leverages and productionizes the [BayesABTest](https://github.com/bakermoran/BayesABTest) package and [Quarto](https://quarto.org/) publishing system. The service will result in a website with a front page listing all tests conducted and various HTML outputs for each experiment.
 
+An example of this service can be run from Replit :smile:!
+
+[![Run on Repl.it](https://replit.com/badge/github/mermelstein/experiment_analysis)](https://replit.com/@dmermelstein/experimentanalysis?v=1)
+
 ### **Example of the front page:**
 
-![service front page](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/templates/images/index_screenshot.png)
+![service front page](https://github.com/mermelstein/experiment_analysis/blob/main/src/templates/images/index_screenshot.png)
 
 ### **Example of an experiment result page:**
 
-![example experiment page](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/templates/images/experiment_screenshot.png)
+![example experiment page](https://github.com/mermelstein/experiment_analysis/blob/main/src/templates/images/experiment_screenshot.png)
 
 ### **Usage:**
 
@@ -18,7 +22,7 @@ Start the service with `docker-compose up` from the terminal.
 
 It all depends on the [experiments.yaml](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/experiments.yaml) file. This is where metadata is listed for each experiment. This metadata could be expanded to include a summary, logic on whether the experiment has finished running, or anything else that you might want to insert in the final writeup. This service is a skeleton, so really up to you.
 
-Quarto is used to generate all HTML files related to experiments, which might get a little heavy depending on how many experiments you run. A more lightweight version could use a similar method to the generation of [index.html](https://github.com/clone-this-repo/experiment_analysis/blob/main/src/website/templates/index_template.html) where you have a template file to which you insert charts and variable values. Quarto renders every experiment through the analysis_output Jupyter notebook (although this could be switched to a markdown file with embedded code).
+Quarto is used to generate all HTML files related to experiments, which might get a little heavy depending on how many experiments you run. A more lightweight version could use a similar method to the generation of [index.html](https://github.com/mermelstein/experiment_analysis/blob/main/src/templates/index_template.html) where you have a template file to which you insert charts and variable values. Quarto renders every experiment through the analysis_output Jupyter notebook (although this could be switched to a markdown file with embedded code).
 
 The service could generate reporting on a schedule (eg daily) or when new experiments are concluded (ie with some trigger).
 
