@@ -4,7 +4,7 @@
 
 This is a Dockerized/containerized skeleton service for applying Bayesian statistics to A/B tests and outputting standardized reports. It leverages and productionizes the [BayesABTest](https://github.com/bakermoran/BayesABTest) package and [Quarto](https://quarto.org/) publishing system. The service will result in a website with a front page listing all tests conducted and various HTML outputs for each experiment.
 
-An example of this service can be run from Replit :smile:!
+An example of this service can be run from Replit :smile:! UPDATE JAN 2024: There have been some changes to resources Replit allocates to free repls, so it might no longer run there. Will run on machines with at least 1GB RAM.
 
 [![Run on Repl.it](https://replit.com/badge/github/mermelstein/experiment_analysis)](https://replit.com/@dmermelstein/experimentanalysis?v=1)
 
